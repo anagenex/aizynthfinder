@@ -18,7 +18,7 @@ min-public-methods = 0
 disable = "W1201, W1203, R0401, W0707, W0221, W0603, R0801, R1735, W1514, C0209, W0237, R1732, W0602, typecheck"
 
 [tool.poetry.dependencies]
-python = ">=3.7,<3.10"
+python = ">=3.7,<3.11"
 deprecated = "^1.2.10"
 grpcio = "^1.24.0"
 ipywidgets = "^7.5.1"
@@ -36,11 +36,12 @@ requests = "^2.23.0"
 scikit-learn = ">0.21.0"
 scipy = "^1.0"
 tables = "^3.6.1"
-tensorflow = "^2.8.0"
-tensorflow-serving-api = "^2.1.0"
+tensorflow = {version="^2.10.0", markers="sys_platform != 'darwin' or platform_machine == 'x86_64'"}
+tensorflow-macos = {version="^2.10.0", markers="sys_platform == 'darwin' and platform_machine != 'x86_64'"}
+tensorflow-serving-api = {version="^2.1.0", markers="sys_platform != 'darwin' or platform_machine == 'x86_64'"}
 tqdm = "^4.42.1"
 timeout-decorator = "^0.5.0"
-route_distances = { url = "https://github.com/MolecularAI/route-distances/archive/refs/tags/v1.0.1.tar.gz" }
+route_distances = { url = "https://github.com/anagenex/route-distances/archive/ff4e996d60a8c26a93adf6c64d2b0ce979b0c3bb.zip" }
 
 [tool.poetry.dev-dependencies]
 black = "^22.0.0"
