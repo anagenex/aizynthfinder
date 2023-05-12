@@ -21,7 +21,7 @@ min-public-methods = 0
 disable = "W3101, R0022, W1201, W1203, R0401, W0707, W0221, W0603, R0801, R1735, W1514, C0209, W0237, R1732, W0602, R0914, typecheck"
 
 [tool.poetry.dependencies]
-python = ">=3.7,<3.11"
+python = ">=3.7,<4"
 ipywidgets = "^7.5.1"
 jinja2 = "^3.0.0"
 jupyter = "^1.0.0"
@@ -35,12 +35,7 @@ requests = "^2.23.0"
 rdchiral = "^1.0.0"
 rdkit = "^2022.3.3"
 tables = "^3.6.1"
-tensorflow-macos = {version = "^2.11.0", platform = "darwin"}
-tensorflow-metal = {version = "^0.7.0", platform = "darwin"}
-tensorflow = [
-    {version = "^2.11.0", platform = "linux"},
-    {version = "^2.11.0", platform = "win32"}
-]
+tensorflow = "^2.13.0rc0"
 tqdm = "^4.42.1"
 grpcio = {version = "^1.24.0", optional=true}
 tensorflow-serving-api = {version = "^2.1.0", optional=true}
